@@ -217,7 +217,21 @@ tr {
 
 
 /*responsive*/
-
+@media (max-width: 1398px){
+    .big-fonts{
+        font-size: 2.4rem;
+    }
+}
+@media (max-width: 1345px){
+    .big-fonts{
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 1285px){
+    .big-fonts{
+        font-size: 2rem;
+    }
+}
 @media (max-width: 1025px){
     .list-block{
         flex-wrap: wrap;

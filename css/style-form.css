@@ -1,0 +1,122 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.form-public-container .form-public-container-inner{
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+    -webkit-box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+    -moz-box-shadow: 0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);
+    overflow: hidden;
+    width: 90%;
+    transition: all 300ms ease;
+}
+.form-public-container .form-public .form-public-body input[type=text], .form-public-container .form-public .form-public-body input[type=email], .form-public-container .form-public .form-public-body input[type=password] {
+    background: #eceff1;
+    border: 1px solid #e9ecf0;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: #29323c;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.1rem;
+}
+.form-public-container .form-public .form-public-head h1, .form-public-container .form-public .form-public-head h2, .form-public-container .form-public .form-public-head h3, .form-public-container .form-public .form-public-head h4, .form-public-container .form-public .form-public-head h5 {
+    text-align: center;
+}
+div {
+    font-weight: 300;
+    font-style: normal;
+    font-size: .85rem;
+    line-height: 1.3;
+}
+.form-public .form-public-head {
+    padding: 2rem 2rem 1rem;
+}
+.form-public .form-public-body {
+    border-bottom: 1px solid #e9ecf0;
+    text-align: left;
+    padding: 1rem 2rem 2rem;
+}
+.form-public-body label {
+    padding-bottom: .5rem;
+}
+label {
+    color: #667;
+    padding: 0 0 10px;
+    display: block;
+}
+.form-public-container .form-public .form-public-body input:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.form-public-container .form-public .form-public-body input[type=text], .form-public-container .form-public .form-public-body input[type=email], .form-public-container .form-public .form-public-body input[type=password] {
+    background: #eceff1;
+    border: 1px solid #e9ecf0;
+}
+.form-public-container .form-public .form-public-body input {
+    width: 100%;
+    padding: .75rem;
+    font-size: 1rem;
+}
+input[type=text], input[type=search], input[type=password], textarea {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 300ms ease;
+    -webkit-transition: border 300ms ease;
+    -moz-transition: border 300ms ease;
+    -ms-transition: border 300ms ease;
+    -webkit-appearance: none;
+}
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=submit], button {
+    -webkit-appearance: none;
+}
+ul, li, table, tbody, th, tr, td, section, span, p, i, strong, b, input, select, option, textarea {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #333;
+    background: 0 0;
+}
+body, button, input, select, textarea {
+    font-family: BlinkMacSystemFont,-apple-system,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,helvetica,arial,sans-serif;
+}
+button, input, select, textarea {
+    margin: 0;
+}
+
+/*media*/
+
+@media (min-width: 1000px){
+    .form-public-container .form-public-container-inner {
+        width: 28rem;
+    }
+    .form-public-container .form-public .form-public-head {
+        padding: 2rem 3rem 1rem;
+    }
+    .form-public-container .form-public .form-public-body {
+        padding: 1rem 3rem 2rem;
+    }
+    .form-public-container .form-public .form-public-body input {
+        font-size: .875rem;
+    }
+    ul, li, table, tbody, th, tr, td, section, span, p, i, strong, b, input, select, option, textarea {
+        font-size: .85rem;
+    }
+}
+@media (min-width: 769px){
+    .form-public-container .form-public-container-inner {
+        width: 75%;
+    }
+}
