@@ -1,9 +1,3 @@
-@font-face{
-    font-family: 'Avenir Next';
-    src: url("../fonts/AvenirNext-Regular.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 body{
     margin: 0;
     padding: 0;
@@ -32,18 +26,26 @@ body{
     width: 100%;
     margin: 0 auto;
 }
-h1{
+.big-fonts{
     font-size: 2.571428571rem;
     font-weight: 400;
     margin: 0;
 }
-h2{
+.responsive-title{
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 400;
+    display: none;
+    margin-bottom: 0;
+}
+.normal-fonts{
     font-weight: 400;
     font-size: 20px;
     margin: 0;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
-h3{
+.medium-fonts{
     font-size: 14px;
     font-weight: 400;
 }
@@ -74,98 +76,6 @@ h3{
 }
 .content{
     margin-top: 100px;
-}
-.list-block{
-    padding: 0;
-    display: flex;
-}
-.list-block li{
-    list-style-type: none;
-    max-width: 238px;
-    width: 100%;
-}
-.list-block li:first-child{
-    max-width: 267px;
-}
-.wrapper-radio{
-    display: flex;
-    padding: 16px 20px;
-    border-radius: 4px;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    -moz-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    border-right: 2px solid #979797;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-.second-block,
-.second-block-question{
-    border-bottom-left-radius: 0 !important;
-    border-top-left-radius: 0 !important;
-}
-.block-configuration{
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-}
-.block-configuration:last-child{
-    margin-right: 0;
-    border-radius: 4px;
-    background: #fff;
-}
-.block-configuration input[type="radio"]{
-    position: relative;
-    display: none;
-}
-.block-configuration label{
-    font-size: 14px;
-    cursor: pointer;
-    position: relative;
-}
-input[type="radio"] + label::before{
-    content: " ";
-    position: absolute;
-    top: 3px;
-    right: -25px;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(51,51,79,0.5);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(51,51,79,0.5);
-    box-shadow: 0px 0px 8px 0px rgba(51,51,79,0.5)
-}
-input[type="radio"]:checked + label::after{
-    content: " ";
-    position: absolute;
-    top: 7px;
-    right: -21px;
-    width: 6px;
-    height: 6px;
-    background: #33334f;
-    border-radius: 100%;
-    background-repeat: no-repeat
-}
-.list-block h3{
-    margin-left: 20px;
-}
-#question{
-  width: 100%;
-}
-.question{
-    max-width: 100% !important;
-}
-.question input[type="text"]{
-    line-height: 50px;
-    border: none;
-    -webkit-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    -moz-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
-    padding-left: 20px;
-    padding-right: 20px;
-    outline: none;
-    border-radius: 4px;
 }
 .table{
     width: 100%;
@@ -209,12 +119,11 @@ input[type="radio"]:checked + label::after{
 }
 .list-teatarea li{
     list-style-type: none;
-    width: 49%;
+    width: calc(50% - 10px);
     margin-right: 10px;
     border-radius: 4px;
 }
 .list-teatarea li textarea{
-    width: 95%;
     border: none;
     outline: none;
     resize: none;
@@ -226,8 +135,10 @@ input[type="radio"]:checked + label::after{
     -webkit-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
     -moz-box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
     box-shadow: 0px 0px 4px 0px rgba(51,51,79,0.4);
+    box-sizing: border-box;
+    width: 100%;
 }
-.list-teatarea h3{
+.list-teatarea .medium-fonts{
     margin-left: 20px;
 }
 .margin-top{
@@ -252,21 +163,28 @@ tr {
     -moz-box-shadow: none;
     box-shadow: none;
 }
-th {
+.column-title{
     font-size: 14px;
     font-weight: 400;
     padding-left: 20px;
     padding-bottom: 0.3em;
 }
-td, th {
+.info-block, .column-title {
     text-align: left;
 }
-td{
+.info-block{
     width: 15%;
-    border-radius: 4px;
 }
-td input[type="text"],
-td select{
+.info-block:first-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.row-table td:last-child{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.info-block .text-input,
+.info-block select{
     max-width: 230px;
     width: 100%;
     line-height: 40px;
@@ -278,11 +196,11 @@ td select{
     border: 1px solid lightgrey;
     margin-right: 50px;
 }
-td select{
+.info-block select{
     height: 44px;
     max-width: 250px;
 }
-td input[type="text"]::placeholder{
+.info-block .text-input::placeholder{
     color: #1f2832;
 }
 .button-delete{
@@ -297,7 +215,7 @@ td input[type="text"]::placeholder{
     .list-block{
         flex-wrap: wrap;
     }
-    h1{
+    .big-fonts{
         font-size: 1.2rem;
     }
     .second-block-question{
@@ -309,6 +227,32 @@ td input[type="text"]::placeholder{
     }
     .btn{
     font-size: 0.8rem;
+    }
+    .info-block .text-input,
+    .block-grey{
+        max-width: 95%;
+        margin-right: 20px;
+    }
+    .container-header{
+        flex-direction: column;
+    }
+    .page-menu{
+        margin-top: 20px;
+    }
+    .responsive-title{
+        display: block;
+    }
+}
+@media (max-width: 768px){
+    .normal-fonts{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 607px){
+    .info-block .text-input,
+    .block-grey{
+        max-width: 95%;
+        margin-right: 20px;
     }
 }
 @media (max-width: 570px){
@@ -329,47 +273,86 @@ td input[type="text"]::placeholder{
         margin-top: 20px;
     }
     .list-teatarea li{
-        width: 90%;
+        width: 100%;
+        margin-right: 0;
     }
     .list-teatarea li textarea{
         width: 100%;
     }
+    .normal-fonts{
+        margin-top: 20px;
+    }
+    .info-block .text-input,
+    .block-grey{
+        max-width: 94%;
+        margin-right: 20px;
+    }
 }
 @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
-    table, thead, tbody, th, td, tr {
+    table, .header-table, tbody, .column-title, .info-block, .row-table {
         display: block;
     }
-    thead tr {
+    .header-table .row-table {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
-    tr { border: 1px solid #ccc;
+    .info-block select{
+        max-width: 100%;
+        margin-right: 20px;
+    }
+    .row-table {
+        border: 1px solid #ccc;
         padding-bottom: 4%;
+        padding-right: 40px;
     }
     .delete, .add{
         width: 40px;
         height: 40px;
     }
-    td {
+    .info-block {
         border: none;
-        border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%;
+        width: 100%;
+        max-width: 100%;
     }
-    td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
+    /*.info-block:before {*/
+        /*position: absolute;*/
+        /*top: 6px;*/
+        /*left: 6px;*/
+        /*width: 45%;*/
+        /*padding-right: 10px;*/
+        /*white-space: nowrap;*/
+    /*}*/
+    /*.info-block:nth-of-type(1):before { content: "Domain"; }*/
+    /*.info-block:nth-of-type(2):before { content: "Language"; }*/
+    /*.info-block:nth-of-type(3):before { content: "Country"; }*/
+    /*.info-block:nth-of-type(4):before { content: "Content origin"; }*/
+}
+@media (max-width: 480px) {
+    .info-block .text-input{
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        max-width: 90%;
     }
-    td:nth-of-type(1):before { content: "Domain"; }
-    td:nth-of-type(2):before { content: "Language"; }
-    td:nth-of-type(3):before { content: "Country"; }
-    td:nth-of-type(4):before { content: "Content origin"; }
+    .big-fonts{
+        text-align: center;
+    }
+    .btn{
+        margin-right: 10px;
+    }
+    .btn:last-child{
+        margin-right: 0;
+    }
+    .block-grey{
+        max-width: 90%;
+    }
+    .normal-fonts{
+        font-size: 18px;
+        margin-top: 20px;
+    }
 }
 @media only screen
 and (min-device-width : 320px)
