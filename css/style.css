@@ -217,6 +217,7 @@ tr {
 
 
 /*responsive*/
+
 @media (max-width: 1398px){
     .big-fonts{
         font-size: 2.4rem;
