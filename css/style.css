@@ -1,3 +1,7 @@
+* a{
+    color: #33334f;
+    text-decoration: none;
+}
 body{
     margin: 0;
     padding: 0;
@@ -108,6 +112,9 @@ body{
     color: #fff;
     right: 20px;
     cursor: pointer;
+}
+.delete img{
+    max-width: 8px;
 }
 .add{
     background: #3ce2a4;
@@ -311,24 +318,18 @@ tr {
         width: 40px;
         height: 40px;
     }
+    .add{
+        font-size: 30px;
+    }
+    .delete img{
+        max-width: 17px;
+    }
     .info-block {
         border: none;
         position: relative;
         width: 100%;
         max-width: 100%;
     }
-    /*.info-block:before {*/
-        /*position: absolute;*/
-        /*top: 6px;*/
-        /*left: 6px;*/
-        /*width: 45%;*/
-        /*padding-right: 10px;*/
-        /*white-space: nowrap;*/
-    /*}*/
-    /*.info-block:nth-of-type(1):before { content: "Domain"; }*/
-    /*.info-block:nth-of-type(2):before { content: "Language"; }*/
-    /*.info-block:nth-of-type(3):before { content: "Country"; }*/
-    /*.info-block:nth-of-type(4):before { content: "Content origin"; }*/
 }
 @media (max-width: 480px) {
     .info-block .text-input{
